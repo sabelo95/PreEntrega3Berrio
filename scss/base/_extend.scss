@@ -1,0 +1,27 @@
+@import "variables";
+
+// extend para la pagina projects
+
+%projects{
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+// extend para la pagina services
+
+%services {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 400px;
+    width: 100%px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

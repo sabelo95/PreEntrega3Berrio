@@ -1,0 +1,146 @@
+@import "../base/variables";
+@import "../base/mixin";
+// Header
+.header-index {
+  @include headers;
+   
+    
+    .header-img {
+      width: 200px;
+      height: 200px;
+      padding: 5px;
+    }
+  }
+  
+  // Body
+  .body-index {
+      width: 100vw;
+      height: 100vh;
+    }
+    
+    .parrafo-principal1 {
+      font-size: 25px;
+      color: white;
+      @include parrafos-index;
+      
+    }
+    
+    .parrafo-principal2 {
+      font-size: 20px;
+      color: white;
+      @include parrafos-index;
+    }
+    
+    .seccion-principal1 {
+      background-color: $color-background;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px;
+     }
+      .about-us {
+        border: 5px solid gray;
+        padding: 10px;
+        background-color: $color-background;
+        color: white;
+        
+        .h2-aboutus {
+          position: absolute;
+          margin: -35px;
+          margin-left: 30px;
+          background-color: black;
+          border-radius: 5px;
+        }
+        
+        .h2-ms {
+          position: absolute;
+          right: 20px;
+          margin: -5px;
+          background-color: black;
+          border-radius: 5px;
+        }
+      }
+    
+  
+    // Choose Us
+  .choose-us {
+      background-color: $color-background;
+      color: white;
+      
+      .h2-choose1 {
+        padding-top: 10px;
+      }
+      
+      .div-chooseus {
+        border: 2px solid gray;
+      } 
+        .div-cajas {
+          display: flex;
+        
+        
+        .span-chooseus {
+          background-image: url(../Images/icon-cajas.webp);
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        
+        .h2-choose2 {
+          display: inline-block;
+          margin-left: 3px;
+        }
+        }
+  }
+  
+  @media (min-width: 320px) {
+  .choose-us{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding-top: 50px;
+      
+      .h2-choose1 {
+        position: absolute;
+        margin-top: -50px;
+        left: 0;
+      }
+      
+      div {
+        margin: 0 10px 0 10px;
+      }
+    }
+  }
+  
+  // Footer
+  .div-footer {
+      height: 150px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      text-align: center;
+      background-color: $color-background;
+      
+      div {
+        margin: auto;
+        color: white;
+        font-size: 30px;
+      }
+      
+      .span-footer1 {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        background-image: url(../Images/instagram.webp);
+        background-size: cover;
+      }
+      
+      .span-footer2 {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        background-image: url(../Images/facebook.webp);
+        background-size: cover;
+      }
+  }

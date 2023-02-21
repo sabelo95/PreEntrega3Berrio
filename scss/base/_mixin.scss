@@ -1,0 +1,12 @@
+@import "../base/variables";
+
+@mixin headers{
+    display: flex;
+    justify-content: center;
+    background-color: $color-background;
+}
+
+@mixin parrafos-index{
+    font-weight: bold;
+    text-align: center;
+}

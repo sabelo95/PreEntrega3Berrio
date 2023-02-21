@@ -1,0 +1,45 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+.header-contact {
+    @include headers;
+    .header-img{
+      width: 200px;
+      height: 200px;
+      padding: 5px; }
+    
+  }
+  
+  .main-contact {
+    background-color: $color-background;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  
+    .contact-div2 {
+      margin-top: 20px;
+    }
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+          "contact-div1 contact-div2"
+          "contact-form contact-div2";
+    
+        .contact-div1 {
+          grid-area: contact-div1;
+          margin: auto;
+        }
+    
+        .contact-form {
+          grid-area: contact-form;
+          margin: auto;
+        }
+    
+        .contact-div2 {
+          grid-area: contact-div2;
+          margin: auto;
+        }
+      }
+    }

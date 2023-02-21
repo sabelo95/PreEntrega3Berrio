@@ -1,0 +1,48 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+.header-team {
+    @include headers;
+    .header-img{
+      width: 200px;
+      height: 200px;
+      padding: 5px; }
+    }
+ 
+ 
+ .main-team {
+    padding: 10px;
+    display: flex;
+    background-color: $color-background;
+    color: white;
+    justify-content: center;
+    height: 100vh;
+    
+    .carousel-caption {
+       background-color: rgba(0, 0, 0, 0.507);
+    }
+    #carouselExample {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+     }
+  }
+
+  .div-mensaje {
+    display: block;
+    background-color: $color-background;
+    color: white;
+    text-align: center;
+    
+    h2 {
+       position: relative;
+       margin-top: -200px;
+    }
+ }
+
+ @media (min-width: 500px) {
+    .div-mensaje {
+       display: none;
+    }
+ }
+ 

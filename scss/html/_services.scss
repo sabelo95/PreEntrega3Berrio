@@ -1,0 +1,169 @@
+@import "../base/variables";
+@import "../base/extend";
+@import "../base/mixin";
+
+.header-services {
+    @include headers;
+    padding-bottom: 10px;
+    .header-img{
+      width: 200px;
+      height: 200px;
+      padding: 5px; }
+    }
+  
+
+  .services-principalsection {
+    color: white;
+  
+    .principalsection-div1 {
+      background-color: $color-background;
+      padding: 10px;
+      grid-area: div1;
+      border: 1px solid gray;
+      padding: 10px;
+  
+      ul {
+        text-decoration: none;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 300px;
+  
+        li {
+          margin-top: 10px;
+  
+          &:hover {
+            scale: 1.1;
+          }
+        }
+  
+        a {
+          text-decoration: none;
+          color: white;
+          box-shadow: 1px 1px 1px;
+        }
+      }
+    }
+  }
+
+  .principalsection-div2 {
+    background-color: $color-background;
+    grid-area: div2;
+    padding: 10px;
+    border: 1px solid gray;
+
+    .services-service2 {
+      h2,
+      p {
+        opacity: 0;
+      }
+
+      &:hover {
+        p,
+        h2 {
+          opacity: 1;
+          background-color: rgba(0, 0, 0, 0.725);
+          transition: all 1s;
+        }
+      }
+    }
+  }
+
+  .services-service1 {
+    background-image: url(../Images/3d-modeling.jpg);
+    @extend %services;
+
+    h2,
+    p {
+      opacity: 0;
+    }
+
+    &:hover {
+      p,
+      h2 {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.725);
+        transition: all 1s;
+      }
+    }
+  }
+
+  .services-service2 {
+    background-image: url(../Images/point-cloud.jpg);
+    @extend %services;
+  
+    h2, p {
+      opacity: 0;
+    }
+  
+    &:hover {
+      h2, p {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.725);
+        transition: all 1s;
+      }
+    }
+  }
+
+  .services-service3 {
+    background-image: url(../Images/3d-scanning.png);
+    @extend %services;
+
+    h2,
+    p {
+      opacity: 0;
+    }
+
+    &:hover {
+      p,
+      h2 {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.725);
+        transition: all 1s;
+      }
+    }
+  }
+
+  .services-service4 {
+    background-image: url(../Images/revit.jpg);
+    @extend %services;
+
+    h2,
+    p {
+      opacity: 0;
+    }
+
+    &:hover {
+      p,
+      h2 {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.725);
+        transition: all 1s;
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+  .services-principalsection {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "div1 div2";
+  }
+
+  .principalsection-div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .services-service1, .services-service2, .services-service3, .services-service4 {
+    height: 600px;
+  }
+
+  .services-service2 {
+    background-position: center;
+  }
+}
+

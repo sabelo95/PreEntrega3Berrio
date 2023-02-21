@@ -1,0 +1,70 @@
+@import "../base/variables";
+@import "../base/extend";
+@import "../base/mixin";
+
+//header
+.header-projects {
+    @include headers;
+    .header-img{
+      width: 200px;
+      height: 200px;
+      padding: 5px; }
+    }
+  
+  
+  .main-projects {
+    background-color: $color-background;
+    color: white;
+    border: 1px solid gray;
+  }
+
+  .projects-div1,.projects-div2,.projects-div3,.projects-div4 {
+    @extend %projects;
+ 
+    h2,
+    p {
+       display: none;
+    }
+ 
+    &:hover {
+       opacity: 0.3;
+ 
+       h2,
+       p {
+          display: inline-block;
+       }
+    }
+ }
+
+ .projects-div1 {
+    background-image: url(../Images/660-ave.png);
+ }
+ 
+ .projects-div2 {
+    background-image: url(../Images/north-weast.jpg);
+    text-align: center;
+ }
+ 
+ .projects-div3 {
+    background-image: url(../Images/lester-glen.jpg);
+ }
+ 
+ .projects-div4 {
+    background-image: url(../Images/waxcenter-open.jpg);
+    text-align: center;
+ }
+
+ .div-responsive {
+    text-align: center;
+ 
+    @media (min-width: 900px) {
+       display: none;
+    }
+ }
+ 
+ @media (min-width: 900px) {
+    .main-projects {
+       display: grid;
+       grid-template-columns: 50% 50%;
+    }
+ }
